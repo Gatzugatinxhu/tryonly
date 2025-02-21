@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navbar</title>
+    <link rel="stylesheet" href="sidenav.css">
+    <script>
+        function toggleMenu(menuId) {
+            const menu = document.getElementById(menuId);
+            menu.classList.toggle('expanded');
+        }
+    </script>
+</head>
+<body>
+    <header class="banner">
+        <h1>Welcome to Our Dashboard</h1>
+        <p>Manage all your resources in one place</p>
+    </header>
+
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="nav">
+            <li>
+                <button onclick="toggleMenu('employee-menu')">Employee</button>
+                <ul id="employee-menu" class="submenu">
+                    <li><a href="#employee-report">Report</a></li>
+                    <li><a href="empform.html">Register</a></li>
+                </ul>
+            </li>
+            <li>
+                <button onclick="toggleMenu('vehicle-menu')">Vehicle</button>
+                <ul id="vehicle-menu" class="submenu">
+                    <li><a href="#vehicle-report">Report</a></li>
+                    <li><a href="vehform.html">Register</a></li>
+                </ul>
+            </li>
+            <li>
+                <button onclick="toggleMenu('Book-menu')">Book</button>
+                <ul id="Book-menu" class="submenu">
+                    <li><a href="#vehicle-report">Report</a></li>
+                    <li><a href="bookform.html">Register</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <!-- Empty content frame -->
+        <div class="content-frame">
+            <p>Content will be displayed here.</p>
+        </div>
+    </main>
+</body>
+</html>

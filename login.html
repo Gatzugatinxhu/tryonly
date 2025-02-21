@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kMVqAxXlF63cFEr9hLSoBNSylAz2D1Sni7W4k/safltaPvZzp7fTzP/SHAdpAxRd5e9w/55e0zD1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="login-container">
+        <h2>Login</h2>
+        <form action="sidenav.html" method="POST">
+            <div class="input-group">
+                <i class="fa-solid fa-id-card"></i> <!-- Icon for ID -->
+                <input type="text" name="idno" placeholder="Enter your ID" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i> <!-- Icon for password -->
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login Now</button>
+        </form>        
+        <div class="signup">
+            <a href="#">Forgot password?</a> | <a href="signup.html">Signup Now</a>
+        </div>
+    </main>
+</body>
+</html>

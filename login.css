@@ -1,0 +1,128 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #c7f5c7, #8cf58c);
+    color: #fff;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.login-container {
+    width: 360px;
+    background: #4CAF50;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.login-container form .input-group input {
+    width: 100%; /* Use 100% width for full responsiveness */
+    padding: 10px 40px; /* Ensure enough space for the icon */
+    font-size: 14px;
+    border: 1px solid #686767;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.login-container form .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.login-container form button {
+    background: #743de8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container form button:hover {
+    background: #5a2dbd;
+}
+
+.login-container .signup {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-container .signup a {
+    color: #0918e9;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-container {
+        width: 100%; /* Expand to fit screen */
+        max-width: 320px; /* Prevent it from being too wide */
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 18px;
+    }
+
+    .login-container form .input-group input {
+        padding: 10px 35px; /* Slightly adjust padding for smaller screens */
+    }
+
+    .login-container form .input-group i {
+        left: 8px; /* Adjust icon position for smaller inputs */
+    }
+
+    .login-container form button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .login-container .signup {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Add spacing between links */
+    }
+
+    .login-container .signup a {
+        font-size: 14px;
+    }
+}

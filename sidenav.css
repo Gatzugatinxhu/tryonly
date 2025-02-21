@@ -1,0 +1,193 @@
+/* General reset and layout styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Banner styles */
+.banner {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 120px;
+    background: #4CAF50;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 100px; /* Adjust the sidebar to start below the banner */
+    left: 0;
+    
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin-bottom: 10px;
+}
+
+.nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav button:hover {
+    background: #66BB6A;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu.expanded {
+    display: block;
+}
+
+.submenu li {
+    margin-bottom: 5px;
+}
+
+.submenu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.submenu a:hover {
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    margin-left: 190px;
+    padding: 20px;
+    margin-top: 80px; /* Adjust the main content to avoid overlap with the banner */
+    transition: margin-left 0.3s; /* Smooth transition when sidebar is collapsed */
+}
+
+/* Content Frame */
+.content-frame {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    width: 95%;  /* Maximize width on all screen sizes */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Layout: Use Flexbox for label and input */
+form {
+    display: flex;
+    flex-wrap: wrap;  /* Allow inputs and labels to wrap */
+    gap: 20px; /* Space between label/input pairs */
+    width: 100%;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Labels and inputs take 48% of width */
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+form input[type="text"], form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Adjusting Button Style */
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* Stack label/input pairs vertically on small screens */
+    form .form-group {
+        width: 100%;  /* Make labels and inputs 100% width */
+    }
+
+    form button {
+        width: 100%;  /* Ensure the button is full width */
+    }
+
+    /* Adjust content frame width and padding */
+    .content-frame {
+        width: 100%; /* Make content frame full width */
+        padding: 10px;  /* Reduce padding on small screens */
+    }
+
+    /* Adjust sidebar for smaller screens */
+    .sidebar {
+        width: 100%; /* Make sidebar full width on smaller screens */
+        top: 60px; /* Adjust the sidebar top positioning */
+    }
+
+    /* Adjust the main content area */
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+}
+
